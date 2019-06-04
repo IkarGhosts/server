@@ -1,0 +1,18 @@
+{% extends 'master.html' %}
+
+{% block page_title %}
+Contacts page
+{% endblock %}
+
+{% block page_content %}
+<h1>
+    Contacts
+</h1>
+<ul>
+    {% for itm in contacts|slice:":2" %}
+    <li>
+        {{ itm }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

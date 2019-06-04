@@ -1,0 +1,27 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block page_title %}
+Product list
+{% endblock %}
+
+{% block page_styles %}
+{% endblock %}
+
+{% block page_content %}
+
+{% include 'pagination.html' with page=page_obj paginator=paginator %}
+
+<ul>
+    {% for itm in object_list %}
+    <li class="category">
+        <a class="category__link" href="{% url 'products:detail' pk=itm.pk %}">
+            <span>{{ itm.title }}</span>
+        </a>
+    </li>
+    {% empty %}
+    Products are not exists
+    {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'master.html' %}
+
+{% block page_title %}
+About Page
+{% endblock %}
+
+{% block page_content %}
+<h1>
+    About
+</h1>
+<h3>
+    {{ username|title|slice:":5" }}
+</h3>
+<article>
+    {{ text }}
+</article>
+{% endblock %}

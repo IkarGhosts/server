@@ -1,0 +1,17 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    margin: 32px 64px 64px
+}
+
+.page__title {
+    color: #444;
+}
+
+.page__subtitle {
+    color: #ccc;
+}

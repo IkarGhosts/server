@@ -1,0 +1,25 @@
+{% extends 'master.html' %}
+
+{% load static %}
+
+{% block page_title %}
+Main page
+{% endblock %}
+
+{% block page_styles %}
+<link rel="stylesheet" href="{% static 'main/index.css' %}">
+{% endblock %}
+
+{% block page_content %}
+<h1 class="page__title">
+    {{ title }}
+</h1>
+<h2 class="page__subtitle">
+    {{ subtitle }}
+</h2>
+{% if is_anon == False %}
+<h3>
+    {{ username }}
+</h3>
+{% endif %}
+{% endblock %}
